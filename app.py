@@ -19,10 +19,15 @@ def favicon():
 @app.route('/main', methods=['POST'])
 def main():
 
-    DB_HOST = os.getenv("DB_HOST")
-    DB_USER = os.getenv("DB_USER")
-    DB_PASS = os.getenv("DB_PASS")
-    DB_DDBB = os.getenv("DB_DDBB")
+    #DB_HOST = os.getenv("DB_HOST")
+    #DB_USER = os.getenv("DB_USER")
+    #DB_PASS = os.getenv("DB_PASS")
+    #DB_DDBB = os.getenv("DB_DDBB")
+
+    DB_DDBB = "ZRZ2"
+    DB_HOST = "zrz-udp-server.database.windows.net"
+    DB_PASS = "Undertaker3:16"
+    DB_USER = "dbravofl"
 
     print(DB_PASS)
   
