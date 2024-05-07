@@ -1,4 +1,5 @@
 import os
+import pymysql
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
@@ -17,18 +18,14 @@ def favicon():
 
 @app.route('/main', methods=['POST'])
 def main():
-    #name = request.form.get('name')
 
-    #if name:
-    #    print('Request for hello page received with name=%s' % name)
-    #    return render_template('hello.html', name = name)
-    #else:
-    #    print('Request for hello page received with no name or blank name -- redirecting')
-    #    return redirect(url_for('index'))
     DB_HOST = os.getenv("DB_HOST")
     DB_USER = os.getenv("DB_USER")
     DB_PASS = os.getenv("DB_PASS")
     DB_DDBB = os.getenv("DB_DDBB")
+
+    print(DB_PASS)
+  
     #try:
     connection = pymysql.connect(
         host=DB_HOST,
