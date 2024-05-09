@@ -42,12 +42,6 @@ def main():
     print(DB_PASS)
   
     #try:
-    connection = pymysql.connect(
-        host=DB_HOST,
-        user=DB_USER,
-        password=DB_PASS,
-        database=DB_DDBB)
-        
     connection = pyodbc.connect(connection_string)
     
     cursor = connection.cursor()
